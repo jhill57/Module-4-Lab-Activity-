@@ -25,12 +25,15 @@ exam_one = int(input("Input exam grade one: "))
 exam_two = int(input("Input exam grade two: "))
 
 exam_3 = int(input("Input exam grade three: "))
-
+# for this list use [] and not paranthesis
+# separate each with a comma..... the addition takes place is sum = sum + grade
 grades = (exam_one + exam_two + exam_3)
 sum = 0
+# for grade in grades:
 for grades in grades:
+# sum = sum + grade
   sum = sum , grades
-
+# avg = sum / len(grades)
 avg = grades/3
 
 if avg >= 90:
@@ -41,12 +44,13 @@ elif avg > 70 and avg < 80:
     letter_grade = "C"
 elif avg >= 60 and avg <= 70:
     letter_grade = "D"
+#this should be else:  since it is the last condition and no need for comparing avg any more.
 elif avg >= 50 and avg <= 59:
     letter_grade = "F"
 
 for grade in grades:
     print("Exam: " + str(grade))
-
+#the last two prints are not part of the loop -- remove indentation
     print("Average: " + str(avg))
 
     print("Grade: " + letter_grade)
